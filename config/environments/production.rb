@@ -77,6 +77,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
+  
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
@@ -85,4 +86,7 @@ Rails.application.configure do
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
+
+  # For devise gem- remember to change url
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
