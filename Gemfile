@@ -30,9 +30,13 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem "paperclip", "~> 4.3"
 
+gem "figaro"
+
 gem 'aws-sdk', '~> 2.2', '>= 2.2.22'
 
 gem 'devise'
+
+gem 'stripe'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
