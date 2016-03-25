@@ -5,8 +5,15 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
          validates :name, presence: true
+         
+         
+         validates :username,
+          :presence => true,
+          :uniqueness => {
+          :case_sensitive => false
+          }
          has_many :listings, dependent: :destroy
          has_many :sales, class_name: "Order", foreign_key: "seller_id"
-        has_many :purchases, class_name: "Order", foreign_key: "buyer_id"
+         has_many :purchases, class_name: "Order", foreign_key: "buyer_id"
          
 end
