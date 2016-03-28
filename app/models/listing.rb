@@ -10,4 +10,12 @@ class Listing < ActiveRecord::Base
      
      belongs_to :user
      has_many :orders
+     
+     
+     belongs_to :category
+     
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%") 
+    where("description LIKE ?", "%#{search}%")
+  end
 end
