@@ -13,6 +13,7 @@ class Listing < ActiveRecord::Base
      
      
      belongs_to :category
+     validates :category, presence: true
      
   def self.search(search)
     where("name LIKE ?", "%#{search}%") 

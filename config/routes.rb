@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   
   get 'purchases' => "orders#purchases"
   
+  resources :categories
+  
   root 'listings#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
