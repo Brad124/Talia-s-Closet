@@ -1,9 +1,9 @@
 <% obj.each do |listing| %>
 
-<%= link_to listing.title, listing_path(listing) %>
+<%= link_to listing.name, listing_path(listing) %>
 
-<% if listings.categories.any? %>
-  <p>Categories: <%= render listing.categories %></p>
+<% if listing.category_id? %>
+  <p>Categories: <%= render listing.category %></p>
 <% end %>
 <% end %>
 
